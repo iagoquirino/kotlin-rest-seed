@@ -1,0 +1,28 @@
+info:
+    project:
+        name: kotlin-rest-seed
+
+server:
+    context-path: /kotlin-rest-seed
+
+spring:
+    application:
+        name: kotlin-rest-seed
+    main:
+        banner-mode: "off"
+    datasource:
+        type: com.zaxxer.hikari.HikariDataSource
+        url: jdbc:hsqldb:mem:dbcore;sql.syntax_mys=true
+        name: kotlin
+        username: seed
+        password:
+    jpa:
+        database-platform: org.hibernate.dialect.HSQLDialect
+    jackson:
+        default-property-inclusion: non_null
+        serialization:
+            fail_on_empty_beans: false
+
+management:
+    security:
+        enabled: false
